@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_0ew5cj1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="18.1.1">
+  <bpmn:collaboration id="Collaboration_1xl74k1">
+    <bpmn:participant id="Participant_0esea6k" name="Manufacturer" processRef="Process_0poaegd" />
+    <bpmn:participant id="Participant_0swyrgn" name="Customer" processRef="Process_0w1gujd" />
+    <bpmn:messageFlow id="Flow_12j79dh" name="Order&#10;Request" sourceRef="Participant_0swyrgn" targetRef="Participant_0esea6k" />
+    <bpmn:messageFlow id="Flow_0co6cko" name="Cancellation" sourceRef="Participant_0swyrgn" targetRef="Participant_0esea6k" />
+    <bpmn:messageFlow id="Flow_1pkxdli" name="Confirmation" sourceRef="Participant_0esea6k" targetRef="Participant_0swyrgn" />
+    <bpmn:messageFlow id="Flow_1gv03aa" name="Order" sourceRef="Participant_0esea6k" targetRef="Participant_0swyrgn" />
+    <bpmn:messageFlow id="Flow_0yrza44" name="Confirmation" sourceRef="Participant_0esea6k" targetRef="Participant_0swyrgn" />
+    <bpmn:messageFlow id="Flow_0q0bxf8" name="Payment" sourceRef="Participant_0swyrgn" targetRef="Participant_0esea6k" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_0poaegd" isExecutable="false" />
+  <bpmn:process id="Process_0w1gujd" />
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_1xl74k1">
+      <bpmndi:BPMNShape id="Participant_0esea6k_di" bpmnElement="Participant_0esea6k" isHorizontal="true">
+        <dc:Bounds x="130" y="350" width="600" height="140" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_0swyrgn_di" bpmnElement="Participant_0swyrgn" isHorizontal="true">
+        <dc:Bounds x="130" y="80" width="600" height="150" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_12j79dh_di" bpmnElement="Flow_12j79dh">
+        <di:waypoint x="220" y="230" />
+        <di:waypoint x="220" y="350" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="214" y="287" width="42" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0co6cko_di" bpmnElement="Flow_0co6cko">
+        <di:waypoint x="420" y="230" />
+        <di:waypoint x="420" y="350" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="405" y="287" width="61" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1pkxdli_di" bpmnElement="Flow_1pkxdli">
+        <di:waypoint x="320" y="350" />
+        <di:waypoint x="320" y="230" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="304" y="287" width="63" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1gv03aa_di" bpmnElement="Flow_1gv03aa">
+        <di:waypoint x="520" y="350" />
+        <di:waypoint x="520" y="230" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="520" y="287" width="30" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0yrza44_di" bpmnElement="Flow_0yrza44">
+        <di:waypoint x="610" y="350" />
+        <di:waypoint x="610" y="230" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="594" y="287" width="63" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0q0bxf8_di" bpmnElement="Flow_0q0bxf8">
+        <di:waypoint x="700" y="230" />
+        <di:waypoint x="700" y="350" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="693" y="287" width="45" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
